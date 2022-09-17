@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specific Book</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div>        
+    Tite:{{book.title}}<br> Author:{{book.author}}<br> Genre:{{book.genre}} 
+    <form action="/books/delete/{{ book.title }}" method="POST">
+        <input type="submit" value="Delete">
+    </div>
+
+</body>
+</html>
