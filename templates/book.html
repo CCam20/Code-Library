@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends "base.html"%}
+
+{%block content%}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,13 @@
     Tite:{{book.title}}<br> Author:{{book.author}}<br> Genre:{{book.genre}} 
     <form action="/books/delete/{{ book.title }}" method="POST">
         <input type="submit" value="Delete">
+    </form>
+    <form action="/books/checkout/{{ book.title }}" method="POST">
+            <input type="submit" value="Check Out">
+    </form>
+    <form action="/books/checkin/{{ book.title }}" method="POST">
+        <input type="submit" value="Check In">
     </div>
 
 </body>
-</html>
+{% endblock%}

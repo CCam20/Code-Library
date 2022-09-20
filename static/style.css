@@ -3,32 +3,20 @@ body{
     background-color: burlywood;
 
 }
-.pics{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
-.book-container{
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-left: auto;
-}
-.books{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 0px;
-}
-#forms{
-    margin-top: 100px;
-}
 header{
 display: flex;
 background-color: grey;
 padding: 10px;
 justify-content: center;
 text-align: center;
+}
+
+text.caption {
+    float:left;
+    clear: both;
+} 
+
+#books{
+    margin-bottom: 30px;
 }

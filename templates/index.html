@@ -2,38 +2,31 @@
 
 {%block content%}
 
-<body><div class="all-container">
-    <div class="pics">
+<body>
+        <div>
+        
             <!-- {%for book in books%}
             <img src="/static/images/Mountain.png" alt="image">
             {% endfor %} -->
-    </div>
-    <div class="books-container">
-        <div class="books">
-        {%for book in books%}
         
-        <div> <a id=mainlinks href="/book/{{books.index(book)}}">{{book.title}}<br>{{book.author}}<br>{{book.genre}}</a><br>
-            Checked Out?:{% if book.checked_out %}<span> &#9989; </span>{% endif %}
-        </div>
-
-        {% endfor %}
-        </div>
-    </div>
-    </div>
+            {%for book in books%}
+            <br><a id="books" href="/book/{{books.index(book)}}">Title:{{book.title}}<br>Author:{{book.author}}<br>Genre:{{book.genre}}</a></div>
+            <div>Checked Out?:{% if book.checked_out %} &#9989; Return Date: {{book.return_date}}{% endif %}</div>
+            {% endfor %}  <br><hr>
     <div>
-        <form id="forms"   action="/books" method="post">
+        <form action="/books" method="post">
 
             <label for="title">Book Title:</label>
-            <input class="imputs" type="text" name="title" id="title">
+            <input  type="text" name="title" id="title">
     
             <label for="author">Author</label>
-            <input class="imputs" type="text" name="author" id="author">
+            <input  type="text" name="author" id="author">
     
             <label for="genre">Genre</label>
-            <input class="imputs" type="text" name="genre" id="genre">
+            <input  type="text" name="genre" id="genre">
 
             <!-- <br><lable for="description">Description:</lable>
-            <br><textarea class="imputs" name="description" rows="5" cols="50"></textarea> -->
+            <br><textarea  name="description" rows="5" cols="50"></textarea> -->
     
             <input type="submit" value="Add New Book">
         </form>
